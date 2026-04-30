@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "updated": "2026-04-29",
+    "note": "Knowledge base ufficiale Nardi Compressori. Aggiungere documenti in questa cartella e referenziarli nel campo 'documents'.",
+    "language": "it"
+  },
+  "products": [
+    { "code": "CM",   "name": "CM",   "desc": { "it": "Compatti", "en": "Compact"  } },
+    { "code": "CB",   "name": "CB",   "desc": { "it": "Booster",  "en": "Booster"  } },
+    { "code": "BM",   "name": "BM",   "desc": { "it": "Mobili",   "en": "Mobile"   } },
+    { "code": "CNG",  "name": "CNG",  "desc": { "it": "Metano",   "en": "CNG"      } },
+    { "code": "BON2", "name": "BON2", "desc": { "it": "Booster",  "en": "Booster"  } }
+  ],
+  "documents": [
+    {
+      "id": "general-safety-001",
+      "product": "*",
+      "title": "Linee guida di sicurezza generali",
+      "type": "safety",
+      "file": "docs/general/safety.txt"
+    },
+    {
+      "id": "general-maintenance-intervals",
+      "product": "*",
+      "title": "Intervalli di manutenzione standard",
+      "type": "maintenance",
+      "file": "docs/general/maintenance-intervals.txt"
+    },
+    {
+      "id": "cb-manual-001",
+      "product": "CB",
+      "title": "Manuale uso e manutenzione CB",
+      "type": "manual",
+      "file": "docs/CB/manual.txt"
+    },
+    {
+      "id": "cb-troubleshooting",
+      "product": "CB",
+      "title": "Guida diagnostica CB",
+      "type": "troubleshooting",
+      "file": "docs/CB/troubleshooting.txt"
+    },
+    {
+      "id": "bon2-manual-001",
+      "product": "BON2",
+      "title": "Manuale BON2 booster azoto/aria",
+      "type": "manual",
+      "file": "docs/BON2/manual.txt"
+    },
+    {
+      "id": "bon2-sizing",
+      "product": "BON2",
+      "title": "Note di dimensionamento BON2",
+      "type": "engineering",
+      "file": "docs/BON2/sizing.txt"
+    },
+    {
+      "id": "cm-manual-001",
+      "product": "CM",
+      "title": "Manuale uso e manutenzione CM",
+      "type": "manual",
+      "content": "PLACEHOLDER: incollare qui il contenuto del manuale CM, oppure usare il campo 'file' per caricarlo da file esterno."
+    },
+    {
+      "id": "bm-manual-001",
+      "product": "BM",
+      "title": "Manuale uso e manutenzione BM",
+      "type": "manual",
+      "content": "PLACEHOLDER: incollare qui il contenuto del manuale BM."
+    },
+    {
+      "id": "cng-manual-001",
+      "product": "CNG",
+      "title": "Manuale uso e manutenzione CNG",
+      "type": "manual",
+      "content": "PLACEHOLDER: incollare qui il contenuto del manuale CNG."
+    },
+    {
+      "id": "oil-spec-general",
+      "product": "*",
+      "title": "Specifiche olio e lubrificanti",
+      "type": "consumables",
+      "file": "docs/general/oil-spec.txt"
+    },
+    {
+      "id": "electrical-sizing",
+      "product": "*",
+      "title": "Dimensionamento elettrico — formule e standard",
+      "type": "engineering",
+      "file": "docs/general/electrical-sizing.txt"
+    },
+    {
+      "id": "spare-parts-procedure",
+      "product": "*",
+      "title": "Procedura ordine ricambi originali",
+      "type": "process",
+      "file": "docs/general/spare-parts.txt"
+    }
+  ]
+}
