@@ -1249,6 +1249,14 @@ body {
         <input type="email" id="supportEmail" value="service@nardicompressori.com" />
       </div>
 
+      <div class="field">
+        <label>Password App (richiesta dipendenti Nardi)</label>
+        <input type="password" id="appPassword" placeholder="Chiedi all'amministratore" autocomplete="new-password" />
+        <div class="field-help">
+          Password per accedere al servizio AI. Inseriscila al primo accesso.
+        </div>
+      </div>
+
     </div>
     <div class="modal-footer">
       <button class="btn btn-secondary" data-modal-close data-i18n="cancel">Annulla</button>
@@ -1491,7 +1499,8 @@ const STATE = {
     apiKey: '',
     model: 'claude-sonnet-4-6',
     kbUrl: '',
-    supportEmail: 'service@nardicompressori.com'
+    supportEmail: 'service@nardicompressori.com',
+    appPassword: ''
   }
 };
 
@@ -2189,7 +2198,8 @@ async function callClaude(messages, retrieved) {
 
   const headers = {
     'Content-Type': 'application/json',
-    'anthropic-version': '2023-06-01'
+    'anthropic-version': '2023-06-01',
+    'x-app-password': STATE.settings.appPassword || ''
   };
   // If using direct Anthropic API, include API key + browser header
   if (STATE.settings.apiUrl.includes('api.anthropic.com')) {
@@ -2461,6 +2471,7 @@ function init() {
   $('modelSelect').value = STATE.settings.model;
   $('kbUrl').value = STATE.settings.kbUrl;
   $('supportEmail').value = STATE.settings.supportEmail;
+  $('appPassword').value = STATE.settings.appPassword || '';
 
   applyI18n();
 
@@ -2500,6 +2511,7 @@ function init() {
     STATE.settings.model = $('modelSelect').value;
     STATE.settings.kbUrl = $('kbUrl').value.trim();
     STATE.settings.supportEmail = $('supportEmail').value.trim() || 'service@nardicompressori.com';
+    STATE.settings.appPassword = $('appPassword').value.trim();
     saveSettings();
     closeModal('settingsModal');
     showToast(t('settingsSaved'), 'success');
